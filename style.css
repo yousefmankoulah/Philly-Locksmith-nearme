@@ -80,10 +80,23 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-
 }
 
 
+.hero-section-contact {
+    display: flex;
+    height: 500px;
+    /* Updated: Added a semi-transparent overlay and centered the background image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/nav2.jpg');
+    background-position: top center;  
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.hero-section-contact h3{
+    font-size: 30px;
+}
 
 
 .hero-left {
