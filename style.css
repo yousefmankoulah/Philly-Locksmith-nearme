@@ -1,0 +1,156 @@
+/* Base styles for typography and background */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Light gray background for overall page */
+    color: #333;
+    line-height: 1.6; /* Improved readability */
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2; /* Tighter line height for headings */
+}
+
+/* Custom Color Variables (for easier maintenance and consistency) */
+:root {
+    --color-dark-primary: #1a1a1a; /* Dark background for header, hero left, footer, contact section */
+    --color-accent-yellow: #ffd700; /* Brighter, gold-like yellow accent */
+    --color-accent-yellow-dark: #e0c000; /* Darker yellow for hover states */
+    --color-light-gray: #f0f2f5; /* General light background */
+    --color-white: #ffffff;
+    --color-text-dark: #333333;
+    --color-text-light: #f0f0f0; /* For text on dark backgrounds */
+}
+
+/* Applying custom colors with Tailwind's arbitrary values or direct classes */
+.bg-dark-primary { background-color: var(--color-dark-primary); }
+.text-accent-yellow { color: var(--color-accent-yellow); }
+.bg-accent-yellow { background-color: var(--color-accent-yellow); }
+.hover\:bg-accent-yellow-dark:hover { background-color: var(--color-accent-yellow-dark); }
+.border-accent-yellow { border-color: var(--color-accent-yellow); }
+.text-light-gray { color: var(--color-light-gray); }
+
+/* Reusable Button Styles - Consistent look and feel for CTAs */
+.btn-primary {
+    @apply bg-accent-yellow text-dark-primary px-8 py-3 rounded-full shadow-lg font-semibold text-lg transition duration-300 ease-in-out;
+    background-color: var(--color-accent-yellow); /* Ensures custom color application */
+    color: var(--color-dark-primary);
+}
+.btn-primary:hover {
+    background-color: var(--color-accent-yellow-dark);
+}
+
+.btn-secondary {
+    @apply bg-transparent text-white border border-white px-8 py-3 rounded-full shadow-md font-semibold text-lg transition duration-300 ease-in-out;
+}
+.btn-secondary:hover {
+    @apply bg-white text-dark-primary;
+}
+
+/* Section Heading Styles - Consistent visual separation for content blocks */
+.section-heading {
+    @apply text-4xl md:text-5xl font-bold text-center mb-16 relative;
+    color: var(--color-text-dark);
+}
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-accent-yellow); /* Yellow accent underline */
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Card Styles for Services and Testimonials - Elevated visual elements */
+.card {
+    @apply bg-white p-8 rounded-xl shadow-lg border border-gray-100 transition duration-300 ease-in-out;
+}
+.card:hover {
+    @apply shadow-2xl transform -translate-y-1; /* Slight lift on hover for interactivity */
+}
+
+/* Hero Section Specific Styles - The dominant first impression */
+.hero-section {
+    display: flex;
+    height: 800px;
+    /* Updated: Added a semi-transparent overlay and centered the background image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/nav.jpg');
+    background-position: center center;  
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+
+
+.hero-left {
+  
+    @apply w-full md:w-1/2 flex flex-col justify-center items-center text-center p-8 md:p-16 text-white;
+}
+.hero-right {
+    @apply hidden md:block md:w-1/2 bg-cover bg-center;
+    /* This background image will now be overlaid by the main hero-section background-image property */
+    background-image: url('https://placehold.co/960x650/1a1a1a/FFFFFF?text=Locksmith+at+Work'); /* Placeholder image, **REPLACE THIS WITH YOUR ACTUAL IMAGE** */
+}
+.hero-content h2 {
+    @apply text-5xl md:text-6xl font-extrabold leading-tight mb-6;
+}
+.hero-content p {
+    @apply text-lg md:text-xl mb-10;
+}
+
+/* Service Icon Styles */
+.service-icon {
+    @apply text-accent-yellow text-6xl mb-6;
+}
+
+/* Testimonial Card Styles */
+.testimonial-card {
+    @apply bg-white p-8 rounded-xl shadow-md flex flex-col items-center text-center border border-gray-100;
+}
+.testimonial-card img {
+    @apply rounded-full w-24 h-24 mb-6 object-cover border-4 border-accent-yellow; /* Yellow border for avatar */
+}
+
+/* Contact Section Styles - Clear path for user engagement */
+.contact-section {
+    @apply py-20 px-4;
+    background-color: var(--color-dark-primary);
+    color: var(--color-text-light);
+}
+.contact-form input,
+.contact-form textarea {
+    @apply w-full p-4 mb-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-yellow;
+    background-color: #333333; /* Darker input background */
+    border-color: #555555; /* Softer border */
+    color: var(--color-white);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaaaaa; /* Lighter placeholder text */
+}
+.contact-form button {
+    @apply w-full mt-6 px-8 py-4 rounded-full shadow-lg font-semibold text-lg transition duration-300 ease-in-out;
+    background-color: var(--color-accent-yellow);
+    color: var(--color-dark-primary);
+}
+.contact-form button:hover {
+    background-color: var(--color-accent-yellow-dark);
+}
+
+/* Footer Styles - Essential for site information and navigation */
+.footer-section {
+    @apply py-12 px-4;
+    background-color: var(--color-dark-primary);
+    color: var(--color-text-light);
+}
+.footer-section a {
+    @apply text-gray-400 hover:text-accent-yellow transition duration-300;
+}
+.footer-heading {
+    @apply text-xl font-semibold mb-6;
+    color: var(--color-white);
+}

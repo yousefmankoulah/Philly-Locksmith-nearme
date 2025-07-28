@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="max-image-preview:large" />
+    <title>Philly Locksmith Near Me - Your Trusted Local Locksmith Services</title>
+
+    <!-- Preload critical resources for faster loading -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" as="style">
+
+    <!-- Tailwind CSS CDN - Essential for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons - Used for service icons, contact info, etc. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Poppins for headings, Inter for body text - Ensures consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Stylesheet - Links to your separate style.css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Bar Header - Provides quick contact info and service availability -->
+    <div class="bg-yellow-700 text-white text-sm py-3 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-accent-yellow" aria-hidden="true"></i>Philadelphia, PA</span>
+                <span class="flex items-center"><i class="fas fa-envelope mr-2 text-accent-yellow" aria-hidden="true"></i><a href="mailto:info@phillylocksmith.com" class="hover:underline">info@phillylocksmith.com</a></span>
+            </div>
+            <div class="flex items-center">
+                <span class="flex items-center"><i class="fas fa-clock mr-2 text-accent-yellow" aria-hidden="true"></i>24/7 Emergency Service</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header - Navigation and primary contact -->
+    <header class="bg-dark-primary text-white shadow-lg py-4 relative z-40">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fas fa-key text-accent-yellow text-4xl mr-3" aria-hidden="true"></i>
+                
+            </div>
+            <nav class="hidden md:flex space-x-8" aria-label="Main Navigation">
+                <a href="#home" class="text-white hover:text-accent-yellow font-semibold text-lg transition duration-300">Home</a>
+                <a href="#services" class="text-white hover:text-accent-yellow font-semibold text-lg transition duration-300">Services</a>
+                <a href="#about" class="text-white hover:text-accent-yellow font-semibold text-lg transition duration-300">About Us</a>
+                <a href="#testimonials" class="text-white hover:text-accent-yellow font-semibold text-lg transition duration-300">Reviews</a>
+                <a href="#contact" class="text-white hover:text-accent-yellow font-semibold text-lg transition duration-300">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+12155551234" class="text-accent-yellow font-extrabold text-xl hover:underline flex items-center"><i class="fas fa-phone mr-2" aria-hidden="true"></i>(215) 555-1234</a>
+            </div>
+            <!-- Mobile Menu Button - Accessible toggle for small screens -->
+            <button id="mobile-menu-button" class="md:hidden text-white text-3xl" aria-label="Open mobile menu" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu Overlay - Full-screen navigation for mobile -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-dark-primary bg-opacity-95 z-50 flex flex-col items-center justify-center p-8" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
+            <button id="close-mobile-menu" class="absolute top-6 right-6 text-white text-4xl" aria-label="Close mobile menu">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <nav class="flex flex-col space-y-8 text-3xl">
+                <a href="#home" class="text-white hover:text-accent-yellow font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Home</a>
+                <a href="#services" class="text-white hover:text-accent-yellow font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Services</a>
+                <a href="#about" class="text-white hover:text-accent-yellow font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About Us</a>
+                <a href="#testimonials" class="text-white hover:text-accent-yellow font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Reviews</a>
+                <a href="#contact" class="text-white hover:text-accent-yellow font-medium transition duration-300" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contact</a>
+                <a href="tel:+12155551234" class="btn-primary mt-10" role="button">Emergency Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section - Dominant visual and call to action -->
+        <section id="home" class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-left">
+                <div class="max-w-xl text-center">
+                    <div class="flex items-center space-x-4 ml-6 pl-4 mb-3">
+                    <p class="text-lg text-white md:text-xl m-0">24/7 Emergency Calls</p>
+                    <hr class="w-48 border-white">
+                    </div>
+
+                    <h1 id="hero-heading" class="text-5xl md:text-6xl font-extrabold leading-tight text-white mb-6">
+                        Philly Locksmith <span class="text-accent-yellow">Near me Services</span> Working 24/7
+                    </h1>
+                    <p class="text-lg text-white md:text-xl mb-10">
+                        We proudly serve Philadelphia and all surrounding neighborhoods with fast, reliable service.
+                    </p>
+                    <div class="flex justify-center mb-8">
+                        <a href="tel:+12155551234" class="btn-primary text-xl flex items-center rounded-3xl h-20 p-3 text-gray-500" role="button"><i class="fas fa-phone mr-3" aria-hidden="true"></i>Call 24/7 Emergency</a>
+                    </div>
+                    <!-- Years of Experience Counter - Visual highlight of expertise -->
+                    <div class="flex justify-center items-center space-x-4 mt-8">
+                        <div class="text-accent-yellow text-5xl font-bold">10+</div>
+                        <div class="text-white text-lg font-medium">Years of <br> Experience</div>
+                    </div>
+                </div>
+            </div>
+          
+        </section>
+        <section class="bg-yellow-400 py-10">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-center">
+      
+      <!-- First Stat -->
+      <div>
+        <h3 class="text-5xl font-bold text-white">1852<span class="text-white">+</span></h3>
+        <p class="text-gray-900 mt-2 text-lg">Client Satisfaction With Our Services</p>
+      </div>
+
+      <!-- Second Stat -->
+      <div>
+        <h3 class="text-5xl font-bold text-white">3778<span class="text-white">+</span></h3>
+        <p class="text-gray-900 mt-2 text-lg">Projects Completed By Our Service</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+        <!-- Why Choose Us Section - Highlights company benefits -->
+        <section id="about" class="py-20 px-4 bg-white" aria-labelledby="why-choose-heading">
+            <div class="container mx-auto flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/650x450/f0f2f5/1a1a1a?text=Expert+Locksmith+Service" alt="Expert locksmith working on a lock" class="rounded-xl shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 id="why-choose-heading" class="text-4xl font-bold text-gray-800 mb-6">Why Choose <span class="text-accent-yellow">Philly Locksmith Near Me</span>?</h2>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        Philly Locksmith Near Me is your premier local locksmith service, dedicated to providing fast, reliable, and professional solutions across Philadelphia. With years of experience, our certified technicians are equipped to handle any lock and key challenge, big or small, ensuring your peace of mind.
+                    </p>
+                    <ul class="space-y-4 text-lg text-gray-700">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent-yellow mr-3 text-xl" aria-hidden="true"></i><span class="font-medium">24/7 Emergency Service</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent-yellow mr-3 text-xl" aria-hidden="true"></i><span class="font-medium">Licensed & Insured Technicians</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent-yellow mr-3 text-xl" aria-hidden="true"></i><span class="font-medium">Fast Response Times</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent-yellow mr-3 text-xl" aria-hidden="true"></i><span class="font-medium">Affordable & Transparent Pricing</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-accent-yellow mr-3 text-xl" aria-hidden="true"></i><span class="font-medium">Customer Satisfaction Guaranteed</li>
+                    </ul>
+                    <div class="flex justify-center mt-8">
+                        <a href="tel:+12155551234" class="btn-primary text-xl flex items-center rounded-3xl h-20 p-3 text-gray-500" role="button"><i class="fas fa-phone mr-3" aria-hidden="true"></i>Call 24/7 Emergency</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section - Detailed list of offerings -->
+       <section id="services" class="py-20 px-4 bg-[#f0f2f5]" aria-labelledby="services-heading">
+  <div class="container mx-auto max-w-7xl">
+    <h2 id="services-heading" class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+      Philly Locksmith near me Services
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card Template -->
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-car-alt"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Automotive Locksmith</h3>
+        <p class="text-gray-600 text-sm">Locked out of your car? Need a new key fob? We provide fast and efficient automotive locksmith services for all makes and models.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-home"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Residential Locksmith</h3>
+        <p class="text-gray-600 text-sm">From rekeying locks to installing smart home security systems, we ensure your home is safe and secure.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-building"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Commercial Locksmith</h3>
+        <p class="text-gray-600 text-sm">Protect your business with our comprehensive commercial locksmith solutions, including master key systems and access control.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Emergency Lockout</h3>
+        <p class="text-gray-600 text-sm">24/7 emergency lockout services for homes, businesses, and vehicles. We're here when you need us most, with rapid response.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-cut"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Key Duplication & Repair</h3>
+        <p class="text-gray-600 text-sm">Need spare keys? We offer precise key cutting and repair services for all types of keys, including transponder keys and car keys.</p>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-all duration-300">
+        <div class="text-4xl text-yellow-500 mb-4">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Security System Installation</h3>
+        <p class="text-gray-600 text-sm">Upgrade your security with our professional installation of high-security locks, alarm systems, and CCTV in Philadelphia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-4 bg-gray-100" aria-labelledby="process-heading">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 id="process-heading" class="text-3xl md:text-4xl font-bold text-gray-800 mb-10">How It Works</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-yellow-500 text-3xl font-bold mb-3">1</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Contact Us</h3>
+        <p class="text-gray-600">Call or message us anytime. Our dispatcher will connect you to the nearest available locksmith.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-yellow-500 text-3xl font-bold mb-3">2</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">We Arrive Fast</h3>
+        <p class="text-gray-600">Our technicians arrive quickly with all the tools and parts needed to solve your problem.</p>
+      </div>
+      <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
+        <div class="text-yellow-500 text-3xl font-bold mb-3">3</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">You’re Back to Normal</h3>
+        <p class="text-gray-600">Whether you’re locked out or upgrading security, we handle it fast and professionally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black text-white py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-6">We Are The Perfect Fit For Your Lock-Out Problem</h2>
+    <p class="text-center text-gray-300 mb-10 max-w-2xl mx-auto">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <!-- Main Content -->
+    <div class="grid md:grid-cols-2 gap-12">
+      <!-- Left -->
+      <div>
+        <p class="text-gray-400 mb-6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+
+        <!-- Progress Bars -->
+        <div class="space-y-6">
+          <div>
+            <p class="font-semibold mb-1">Locksmith Services</p>
+            <div class="bg-gray-700 h-2 rounded-full">
+              <div class="bg-yellow-400 h-2 w-[92%] rounded-full"></div>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Arrival Time</p>
+            <div class="bg-gray-700 h-2 rounded-full">
+              <div class="bg-yellow-400 h-2 w-[82%] rounded-full"></div>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Modern Technology</p>
+            <div class="bg-gray-700 h-2 rounded-full">
+              <div class="bg-yellow-400 h-2 w-[96%] rounded-full"></div>
+            </div>
+          </div>
+          <div>
+            <p class="font-semibold mb-1">Certified Team</p>
+            <div class="bg-gray-700 h-2 rounded-full">
+              <div class="bg-yellow-400 h-2 w-[90%] rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right stats -->
+      <div class="grid grid-cols-2 gap-6 text-center">
+        <div>
+          <i class="fas fa-users text-yellow-400 text-3xl mb-2"></i>
+          <h3 class="text-3xl font-bold">34+</h3>
+          <p class="text-gray-300">Expert Team</p>
+        </div>
+        <div>
+          <i class="fas fa-tasks text-yellow-400 text-3xl mb-2"></i>
+          <h3 class="text-3xl font-bold">3778+</h3>
+          <p class="text-gray-300">Project Completed</p>
+        </div>
+        <div>
+          <i class="fas fa-smile text-yellow-400 text-3xl mb-2"></i>
+          <h3 class="text-3xl font-bold">30+</h3>
+          <p class="text-gray-300">Client Satisfaction</p>
+        </div>
+        <div>
+          <i class="fas fa-briefcase text-yellow-400 text-3xl mb-2"></i>
+          <h3 class="text-3xl font-bold">15+</h3>
+          <p class="text-gray-300">Years Experience</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Boxes -->
+    <div class="grid md:grid-cols-3 gap-6 mt-16">
+      <div class="bg-white text-black shadow-lg p-6 rounded">
+        <i class="fas fa-shield-alt text-yellow-500 text-3xl mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Satisfaction Guarantee</h4>
+        <p class="text-gray-600">Lorem ipsum dolor sit consecte adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+      <div class="bg-yellow-400 text-black shadow-lg p-6 rounded">
+        <i class="fas fa-comments text-black text-3xl mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Free Consultations</h4>
+        <p>Lorem ipsum dolor sit consecte adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+      <div class="bg-black border border-yellow-400 text-white shadow-lg p-6 rounded">
+        <i class="fas fa-clock text-yellow-400 text-3xl mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">24/7 Availability</h4>
+        <p class="text-gray-300">Lorem ipsum dolor sit consecte adipiscing elit, sed do eiusmod tempor incididunt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-4 bg-white" aria-labelledby="testimonials-heading">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 id="testimonials-heading" class="text-3xl md:text-4xl font-bold text-gray-800 mb-12">What Our Customers Say</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+        <p class="text-gray-600 italic">“Locked out of my car at 2 AM. Called and they were there in 20 minutes. Super professional and quick.”</p>
+        <div class="mt-4 text-yellow-500 font-semibold">— Maria R., South Philly</div>
+      </div>
+      
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+        <p class="text-gray-600 italic">“Used them for our new home locks. They explained everything and helped me choose the best security option.”</p>
+        <div class="mt-4 text-yellow-500 font-semibold">— Kevin B., Fishtown</div>
+      </div>
+      
+      <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition">
+        <p class="text-gray-600 italic">“Needed a commercial master key system and they delivered perfectly—on time and on budget.”</p>
+        <div class="mt-4 text-yellow-500 font-semibold">— Alicia M., Center City</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+        <!-- Contact Section - Form and contact information -->
+        <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+            <div class="container mx-auto">
+                <h2 id="contact-heading" class="section-heading text-white">Get in Touch with Philly Locksmith Near Me</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Contact Form -->
+                    <div class="bg-gray-800 p-10 rounded-xl shadow-lg contact-form border border-gray-700">
+                        <h3 class="text-3xl font-bold text-white mb-8 text-center">Send Us a Message</h3>
+                        <form aria-label="Contact Form">
+                            <input type="text" placeholder="Your Name" required aria-label="Your Name">
+                            <input type="email" placeholder="Your Email" required aria-label="Your Email">
+                            <input type="tel" placeholder="Your Phone Number" required aria-label="Your Phone Number">
+                            <textarea placeholder="Your Message" rows="6" aria-label="Your Message"></textarea>
+                            <button type="submit" role="button">Send Message</button>
+                        </form>
+                    </div>
+                    <!-- Google Map & Contact Info -->
+                    <div class="bg-gray-800 p-10 rounded-xl shadow-lg border border-gray-700">
+                        <h3 class="text-3xl font-bold text-white mb-8 text-center">Find Us & Contact Info</h3>
+                        <div class="aspect-w-16 aspect-h-9 mb-8 rounded-lg overflow-hidden shadow-md">
+                            <!-- IMPORTANT: Replace with actual Google Maps embed for your business location -->
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12224.225916001046!2d-75.16522199999999!3d39.952583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6c62f2d9f2a99%3A0x4a9d7b1a2b3c4d5e!2sPhiladelphia%2C%20PA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" title="Google Map of Philadelphia, PA">
+                            </iframe>
+                        </div>
+                        <ul class="space-y-4 text-lg text-gray-300" aria-label="Contact Information">
+                            <li class="flex items-center"><i class="fas fa-map-marker-alt text-accent-yellow mr-4 text-xl" aria-hidden="true"></i>Philadelphia, PA (Serving all neighborhoods)</li>
+                            <li class="flex items-center"><i class="fas fa-phone-alt text-accent-yellow mr-4 text-xl" aria-hidden="true"></i><a href="tel:+12155551234" class="hover:underline font-semibold">(215) 555-1234</a></li>
+                            <li class="flex items-center"><i class="fas fa-envelope text-accent-yellow mr-4 text-xl" aria-hidden="true"></i><a href="mailto:info@phillylocksmith.com">info@phillylocksmith.com</a></li>
+                            <li class="flex items-center"><i class="fas fa-clock text-accent-yellow mr-4 text-xl" aria-hidden="true"></i>Available 24/7 for Emergencies</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer - Copyright, quick links, and social media -->
+    <footer class="footer-section" role="contentinfo">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center md:text-left">
+            <!-- Column 1: Logo and About -->
+            <div>
+                <div class="flex items-center justify-center md:justify-start mb-4">
+                    <i class="fas fa-key text-accent-yellow text-4xl mr-3" aria-hidden="true"></i>
+                    <h3 class="text-2xl font-bold text-white">Philly Locksmith</h3>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Your trusted partner for all locksmith needs in Philadelphia. We provide fast, reliable, and professional services around the clock.
+                </p>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="space-y-2" aria-label="Quick Links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#testimonials">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="footer-heading">Our Services</h4>
+                <ul class="space-y-2" aria-label="Our Services">
+                    <li><a href="#services">Automotive Locksmith</a></li>
+                    <li><a href="#services">Residential Locksmith</a></li>
+                    <li><a href="#services">Commercial Locksmith</a></li>
+                    <li><a href="#services">Emergency Lockout</a></li>
+                    <li><a href="#services">Key Duplication</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Info -->
+            <div>
+                <h4 class="footer-heading">Contact Info</h4>
+                <ul class="space-y-2 text-gray-400" aria-label="Contact Information">
+                    <li><i class="fas fa-map-marker-alt mr-2 text-accent-yellow" aria-hidden="true"></i>Philadelphia, PA</li>
+                    <li><i class="fas fa-phone-alt mr-2 text-accent-yellow" aria-hidden="true"></i><a href="tel:+12155551234">(215) 555-1234</a></li>
+                    <li><i class="fas fa-envelope mr-2 text-accent-yellow" aria-hidden="true"></i><a href="mailto:info@phillylocksmith.com">info@phillylocksmith.com</a></li>
+                    <li><i class="fas fa-clock mr-2 text-accent-yellow" aria-hidden="true"></i>24/7 Service</li>
+                </ul>
+                <div class="flex justify-center md:justify-start space-x-4 mt-6" aria-label="Social Media Links">
+                    <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300" aria-label="Facebook"><i class="fab fa-facebook-f text-xl" aria-hidden="true"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300" aria-label="Twitter"><i class="fab fa-twitter text-xl" aria-hidden="true"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-accent-yellow transition duration-300" aria-label="Instagram"><i class="fab fa-instagram text-xl" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
+            &copy; 2023 Philly Locksmith Near Me. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for smooth scrolling and mobile menu functionality.
+        // This script ensures a better user experience on both desktop and mobile devices.
+
+        // Smooth scrolling for all internal navigation links.
+        // When a link starting with '#' is clicked, the page scrolls smoothly to the target section.
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default jump behavior
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth' // Smooth scroll animation
+                    });
+
+                    // Close mobile menu if open after navigation
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuButton.setAttribute('aria-expanded', 'false'); // Update ARIA attribute
+                    }
+                }
+            });
+        });
+
+        // Mobile menu toggle functionality.
+        // Handles opening and closing the full-screen mobile navigation.
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+        // Event listener for opening the mobile menu.
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden'); // Show the mobile menu
+            mobileMenuButton.setAttribute('aria-expanded', 'true'); // Update ARIA attribute for accessibility
+        });
+
+        // Event listener for closing the mobile menu.
+        closeMobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden'); // Hide the mobile menu
+            mobileMenuButton.setAttribute('aria-expanded', 'false'); // Update ARIA attribute
+        });
+    </script>
+
+</body>
+</html>
