@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+Disallow: 
+Allow: /index.html/
+
+Sitemap: https://www.carkeyslocksmith247.com/sitemap.xml

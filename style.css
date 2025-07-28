@@ -154,3 +154,39 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-xl font-semibold mb-6;
     color: var(--color-white);
 }
+
+.back-to-top {
+ 
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: white;
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  z-index: 99;
+  position: fixed;
+  width: 150px !important;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 25px;
+}
+
+.custom-btn-2 {
+
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-large);
+  color: white;
+  font-size:18px;
+  font-weight: bolder;
+  line-height: normal;
+  transition: all 0.3s;
+  padding: 10px 20px;
+  position: fixed;
+  width: 150px !important;
+  right: 30px;
+  bottom: 80px;
+  z-index: 99;
+  border-radius: 25px;
+}

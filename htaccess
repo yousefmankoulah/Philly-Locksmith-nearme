@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^carkeyslocksmith247.com [NC]
+
+RewriteRule ^(.*)$ https://www.carkeyslocksmith247.com/$1 [L,R=301]
