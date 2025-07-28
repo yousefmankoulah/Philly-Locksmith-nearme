@@ -39,7 +39,7 @@
 
 
 
-         $('#quoteForm').submit(function(e) {
+         $('#quoteForm2').submit(function(e) {
     e.preventDefault(); // Prevent normal form submission
     $.ajax({
       url: 'sendmail.php',
@@ -66,3 +66,69 @@
     $(".custom-btn-2").css("visibility", "visible");
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Open modal
+    document.querySelectorAll('[data-modal-target]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal-target');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('hidden');
+          document.body.classList.add('modal-open');
+        }
+      });
+    });
+
+    // Close modal
+    document.querySelectorAll('[data-modal-close]').forEach(button => {
+      button.addEventListener('click', () => {
+        const modal = button.closest('.fixed');
+        
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.classList.remove('modal-open');
+        }
+      });
+    });
+
+    // Close when clicking outside modal content
+    document.querySelectorAll('.fixed.inset-0').forEach(modal => {
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          document.body.classList.remove('modal-open');
+        }
+      });
+    });
+
+    const form = document.getElementById('quoteForm');
+if (form) {
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('sendmail.php', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        document.getElementById('quoteModal').classList.add('hidden');
+        document.body.classList.remove('modal-open');
+        form.reset();
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('AJAX error:', error);
+      alert('An error occurred while sending the message.');
+    }
+  });
+}
+
+  });

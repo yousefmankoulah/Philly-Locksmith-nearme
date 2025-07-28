@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = filter_var($_POST["name"], FILTER_SANITIZE_STRING);
     $email = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
     $phone = filter_var($_POST["phone"], FILTER_SANITIZE_STRING);
-    $address = filter_var($_POST["address"], FILTER_SANITIZE_STRING);
     $message = filter_var($_POST["message"], FILTER_SANITIZE_STRING);
 
     // Check if all required fields are filled
@@ -31,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $mail->isHTML(false);
             $mail->Subject = "New quote requested";
-            $mail->Body = "The Customer name: $name\nThe Customer Email: $email\nThe Customer Phone: $phone\nThe Customer address: $address\nThe Message: $message";
+            $mail->Body = "The Customer name: $name\nThe Customer Email: $email\nThe Customer Phone: $phone\nThe Message: $message";
 
             $mail->send();
             echo '<script>alert("Message sent successfully!");</script>';
