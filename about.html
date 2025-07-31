@@ -88,7 +88,7 @@
     <!-- Google Fonts: Poppins for headings, Inter for body text - Ensures consistent typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Custom CSS Stylesheet - Links to your separate style.css file -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -414,7 +414,8 @@
             </div>
         </div>
         <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-500 text-sm">
-            &copy; 2023 Lockout Near Me 24/7. All rights reserved.
+          &copy; 2023 Lockout Near Me 24/7. All rights reserved.  
+          Designed by <a href="tel:+16095167320" class="text-gray-400 hover:underline">Sky Technology</a>
         </div>
     </footer>
 
@@ -459,6 +460,11 @@
 
     <script src="main.js">
     </script>
+    <script
+    src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async
+    defer
+  ></script>;
 
 </body>
 </html>
