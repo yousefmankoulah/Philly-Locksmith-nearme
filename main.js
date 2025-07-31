@@ -128,14 +128,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// adding recapta
+// adding reCAPTCHA
 
 var widgetId; // To store the reCAPTCHA widget ID
 
 // This function runs when the reCAPTCHA API is loaded
 var onloadCallback = function () {
   widgetId = grecaptcha.render("recaptcha-invisible-container", {
-    sitekey: "6LcUSSgqAAAAAMEH68mHku6siSMxQTnVtU6fLvWn",
+    sitekey: "6LeyH5YrAAAAACo4_YecluIQ55OkoYeyC7S_LqIV",
     size: "invisible",
     callback: onRecaptchaSuccess, // This callback receives the token
   });
