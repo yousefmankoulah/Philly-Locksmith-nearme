@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Port = 465; // TCP port to connect to
 
             $mail->setFrom($email, $name);
-            $mail->addAddress('carkeyslocksmith247@gmail.com');
+            $mail->addAddress('lockoutnearmecall@gmail.com');
 
             $mail->isHTML(false);
             $mail->Subject = "New quote requested";
