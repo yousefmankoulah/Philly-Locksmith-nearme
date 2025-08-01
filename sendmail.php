@@ -20,8 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com'; // Gmail SMTP host
             $mail->SMTPAuth = true;
-            $mail->Username = 'carkeyslocksmith247@gmail.com'; // Your Gmail username
-            $mail->Password = 'inrp wdss geqb idmr'; // Your Gmail password
+            $mail->Username = 'lockoutnearmecall@gmail.com'; // Your Gmail username
+            $mail->Password = 'zjvg sefe qwzc ywop'; // Your Gmail password
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption; 'ssl' is also accepted
             $mail->Port = 465; // TCP port to connect to
 
